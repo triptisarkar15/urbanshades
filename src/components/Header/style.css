@@ -1,0 +1,16 @@
+.heading{
+    text-align: center;
+    font-family: 'Courgette', cursive;
+    font-size: 45px;
+    background: -webkit-linear-gradient(#1c92d2, #f2fcfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.subscript{
+    text-align: center;
+    font-family: 'Kristi', cursive;
+    font-size: 32px;
+    background: -webkit-linear-gradient( #00b09b, #27787e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

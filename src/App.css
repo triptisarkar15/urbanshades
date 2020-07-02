@@ -1,0 +1,13 @@
+body{
+    background: #17202A; 
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: aliceblue; 
+}
+.App{
+    width: 90%;
+    margin: 0 auto;
+}
+a{
+    color: cornsilk;
+    margin: 0 10px;
+}
