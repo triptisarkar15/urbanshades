@@ -7,6 +7,7 @@ import Home from './containers/Home/Home'
 import Posts from './containers/Posts/Posts'
 import Subscribe from './containers/Subscribe/Subscribe'
 import Contact from './containers/Contact/Contact'
+import Login from './components/Auth/Login';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route exact path='/posts' component={Posts} />
         <Route exact path='/subscribe' component={Subscribe} />
         <Route exact path='/contact' component={Contact} />
+        <Route exact path='/login' component={Login} />
       </Switch> 
     </BrowserRouter>
     
