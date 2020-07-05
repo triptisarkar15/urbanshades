@@ -7,7 +7,7 @@ function Login() {
     const clearedForm = { username: "", password: "" }
     const [form, setform] = useState(clearedForm)
 
-    const handelChange = (e) => {
+    const handelChange = (e) => {//ytutuy
         setform({ ...form, [e.target.name]: e.target.value })
     }
 
