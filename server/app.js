@@ -24,6 +24,7 @@ app.get('/', (req, res) => {
 //Route as middelware
 app.use('/api/auth', require('./routes/auth'))
 app.use('/api/post', require('./routes/post'))
+app.use('/api/subs', require('./routes/subscriber'))
 
 //Database
 mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
