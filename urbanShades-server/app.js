@@ -6,6 +6,8 @@ var logger = require('morgan');
 const cors = require('cors')
 const mongoose = require('mongoose');
 
+require('dotenv').config()
+
 var app = express();
 
 app.use(logger('dev'));
@@ -20,17 +22,18 @@ app.get('/', (req, res) => {
 })
 
 //Route as middelware
-app.use('/api', require('./routes/api'))
+app.use('/api/auth', require('./routes/auth'))
+app.use('/api/post', require('./routes/post'))
 
 //Database
-mongoose.connect("mongodb+srv://urbanshades:onlyme2705@urbanshades.6jmof.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
+mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
   if (err) return console.log("ERROR: ", err)
   return console.log("Connected to DataBase successfully..")
 })
 
 
-
-app.listen(5000, (err) => {
+const PORT = process.env.PORT || 8080
+app.listen(PORT, (err) => {
   if (err) console.log("ERROR: ", err)
   console.log("Server has started...")
 })

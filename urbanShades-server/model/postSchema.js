@@ -2,9 +2,12 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const postSchema = new Schema({
-    file_name: {
+    filename: {
         type: String,
         required: true
+    },
+    description: {
+        type: String
     },
     date: {
         type: Date,
