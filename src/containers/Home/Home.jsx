@@ -1,18 +1,32 @@
 import React from 'react';
 import './style.css';
-import Header from '../../components/Header/Header';
+
 import Navbartop from '../../components/Navbartop/Navbartop';
 import CardAbout from '../../components/Card/CardAbout'
 
+import Content from '../../components/Content/Content';
+import Sidebar from '../Sidebar/Sidebar';
+
+
 const Home = (props)=> {
     return (
+        
         <div >
-            <div className="row mx-0">
+            <div className="row my-0">
+                <div className='col-md-5 offset-md-1'>
+                    <Content/>
+                </div>
                 <div className="col-md-3 offset-sm-8">                    
                     <CardAbout/>
+                   
+                </div>
+                <div className="col-md-3 offset-sm-8">
+                    <Sidebar />
                 </div>
             </div>
+           
         </div>
+       
     );
 }
 
