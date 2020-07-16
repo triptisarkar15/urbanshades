@@ -1,24 +1,18 @@
 .navbar-nav{
     margin-top: 10px;
-    margin-left: 150px;
+    margin-left: 215px;
     letter-spacing: 1px;
     font-family: 'Shadows Into Light', cursive;
     font-size: 30px;
 }
-
 .navbar-nav a{
-    
-    color: rgb(197, 195, 221);
+   
     margin-right: 50px;
     text-decoration: none;
 }
 
-.navbar-nav a:hover{
-    color: gray;
-}
 
-.bg-dark, .navbar-dark{
-    background-color: black;
+.nav-item a:hover{
+    color: chartreuse;
 }
-
 
