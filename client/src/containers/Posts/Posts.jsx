@@ -14,13 +14,19 @@ const Post = (props) => {
             setposts(gettingPost)
         }
         getPost()
+        document.getElementById("post").style.color = "red"
+        return () => {
+            document.getElementById("post").style.color = "beige"
+        }
     }, [])
+
+    
     return (
         <div className="row">
             <div className="col-md-3 offset-sm-2">
                 <div className="row1">
                     {posts && posts.data.res.map((post) => (
-                        <div className="col my-4"  key={post._id}>
+                        <div className="col my-4" key={post._id}>
                             <Card style={{ width: '48rem', padding: '15px', borderRadius: '10px' }}>
                                 <Card.Img variant="top" src={`/images/PostImages/${post.filename}`} />
                                 <Card.Body>

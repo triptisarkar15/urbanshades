@@ -12,16 +12,16 @@ const Navbartop = (props) => {
 
             <Nav className="justify-content-center" defaultActiveKey="/" >
                 <Nav.Item  >
-                    <NavLink to="/" style={{color: 'rgb(197, 195, 221)'}}>Home</NavLink>
+                    <NavLink to="/" id="home">Home</NavLink>
                 </Nav.Item>
                 <Nav.Item>
-                    <NavLink to="/posts" style={{color: 'rgb(197, 195, 221)'}}>Posts</NavLink>
+                    <NavLink to="/posts" id="post">Posts</NavLink>
                 </Nav.Item>
                 <Nav.Item>
-                    <NavLink to="/subscribe"style={{color: 'rgb(197, 195, 221)'}}>Subscribe</NavLink>
+                    <NavLink to="/subscribe" id="subscribe">Subscribe</NavLink>
                 </Nav.Item>
                 <Nav.Item>
-                    <NavLink to="/contact"style={{color: 'rgb(197, 195, 221)'}}>Contact</NavLink>
+                    <NavLink to="/contact" id="contact">Contact</NavLink>
                 </Nav.Item>
 
             </Nav>

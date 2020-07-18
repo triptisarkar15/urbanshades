@@ -6,10 +6,11 @@
     font-size: 30px;
 }
 .navbar-nav a{
-   
+    color: beige;
     margin-right: 50px;
     text-decoration: none;
 }
+
 
 
 .nav-item a:hover{

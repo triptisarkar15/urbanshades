@@ -1,7 +1,14 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { Card } from 'react-bootstrap'
 
 function Contact(props) {
+    useEffect(() => {
+        
+        document.getElementById("contact").style.color = "red"
+        return () => {
+            document.getElementById("contact").style.color = "beige"
+        }
+    }, [])
     const clearedForm = {first_name: '', last_name: '', email: '', description: ''}
     const [form, setform] = useState(clearedForm)
 

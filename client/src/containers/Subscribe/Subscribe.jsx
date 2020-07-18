@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import './style.css';
 import Axios from "axios";
 import { BaseUrl } from '../../variables'
 
 const Subscribe = (props) => {
+    useEffect(() => {
+        
+        document.getElementById("subscribe").style.color = "red"
+        return () => {
+            document.getElementById("subscribe").style.color = "beige"
+        }
+    }, [])
 
     const clearedForm = { email: "" }
     const [form, setform] = useState(clearedForm)
@@ -18,6 +25,7 @@ const Subscribe = (props) => {
         setform(clearedForm)
 
     }
+   
 
     return (
         <div className='body'>

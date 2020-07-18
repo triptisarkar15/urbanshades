@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{useEffect} from 'react';
 import './style.css';
 
 import CardAbout from '../../components/Card/CardAbout'
@@ -8,6 +8,14 @@ import Sidebar from '../Sidebar/Sidebar';
 
 
 const Home = (props) => {
+    useEffect(() => {
+        
+        document.getElementById("home").style.color = "red"
+        return () => {
+            document.getElementById("home").style.color = "beige"
+        }
+    }, [])
+
     return (
 
         <div >
