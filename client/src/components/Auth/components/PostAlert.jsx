@@ -3,8 +3,8 @@ import { Card } from 'react-bootstrap';
 import Axios from 'axios'
 import { BaseUrl } from '../../../variables'
 
-function PostCreate() {
-    const clearedForm = { filename: "", description: "" }
+function PostAlert() {
+    const clearedForm = { postUrl: "" }
     const [form, setform] = useState(clearedForm)
 
     const handelChange = (e) => {
@@ -14,7 +14,7 @@ function PostCreate() {
     const handelSubmit = async (e) => {
         e.preventDefault()
 
-        const submitPost = await Axios.post(BaseUrl + '/api/post/create', form)
+        const submitPost = await Axios.post(BaseUrl + '/api/subs/postalert', form)
         console.log(submitPost)
         setform(clearedForm)
 
@@ -24,10 +24,9 @@ function PostCreate() {
         <div>
             <Card>
                 <Card.Body>
-                    <h3 className="text-center" style={{color: "black"}}>Create Post</h3>
+                    <h3 className="text-center" style={{color: "black"}}>Send Post Alert to Subscribers</h3>
                     <form method="post" onSubmit={handelSubmit}>
-                        <input className="form-control" type="text" name="filename" placeholder="Filename with extension" onChange={handelChange} value={form.filename} required /> <br />
-                        <textarea className="form-control" row="5" name="description" placeholder="Description" cols="30" rows="10" onChange={handelChange} value={form.description} required ></textarea> <br />
+                        <input className="form-control" type="text" name="postUrl" placeholder="url of post" onChange={handelChange} value={form.filename} required /> <br />
                         <button className="btn btn-dark" type="submit">Submit</button>
                     </form>
                 </Card.Body>
@@ -37,4 +36,4 @@ function PostCreate() {
     )
 }
 
-export default PostCreate
+export default PostAlert

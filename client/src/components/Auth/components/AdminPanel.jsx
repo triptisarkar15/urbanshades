@@ -1,6 +1,7 @@
 import React from 'react'
 import PostCreate from './PostCreate'
 import Subscriber from './Subscriber'
+import PostAlert from './PostAlert'
 
 function AdminPanel() {
 
@@ -12,6 +13,9 @@ function AdminPanel() {
             </div>
             <div className="col-md-4">
                 <Subscriber />
+            </div>
+            <div className="col-md-4">
+                <PostAlert />
             </div>
         </div>
 

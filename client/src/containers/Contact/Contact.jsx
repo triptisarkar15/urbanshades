@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Card } from 'react-bootstrap';
 import './style.css';
 
 function Contact(props) {
@@ -12,7 +11,7 @@ function Contact(props) {
             document.getElementById("contact").style.color = "beige"
         }
     }, [])
-    const clearedForm = { first_name: '', last_name: '', email: '', description: '' }
+    const clearedForm = { fullname: '', email: '', description: '' }
     const [form, setform] = useState(clearedForm)
 
     const handelChange = (e) => {
@@ -31,7 +30,7 @@ function Contact(props) {
             <div class="txtb">
                 <label>Full Name :</label>
                 
-                <input type="text" name="text" className="input" value="" placeholder="" onChange={handelChange} required />
+                <input type="text" name="fullname" className="input" value={form.fullname} placeholder="" onChange={handelChange} required />
             </div>
 
             <div class="txtb">
@@ -45,7 +44,7 @@ function Contact(props) {
                 <label placeholder="" onChange={handelChange} required>Message:</label>
                 <textarea></textarea>
             </div>
-            <a class="btn" onClick={handelSubmit}>Submit</a>
+            <button class="btn" onClick={handelSubmit}>Submit</button>
             </form>
         </div>
         </div>
