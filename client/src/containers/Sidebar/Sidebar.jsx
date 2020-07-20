@@ -6,9 +6,9 @@ const Sidebar = (props) => {
 
     return (
         <div style={{display:'flexbox',marginLeft:'15px'}} >
-            <Card style={{ marginTop: '-3496px', boxSizing: 'border-box' }}>
+            <Card style={{ marginTop: '-3695px', boxSizing: 'border-box' }}>
                 <Card.Body>
-                <Card.Title style={{color:'black' , textAlign:'center'}}><strong>Social Media Links</strong></Card.Title>
+                <Card.Title style={{color:'black' ,fontFamily:'cursive', textAlign:'center'}}><strong>Social Media Links</strong></Card.Title>
                 <Card.Text style={{color:'black'}}>Follow me on:</Card.Text>
                 <ul style={{color:'black'}}>
                 <li><a href='https://www.instagram.com' target='_blank' rel="noopener noreferrer" style={{color:'black'}}>Instagram</a></li>

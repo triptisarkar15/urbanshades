@@ -1,5 +1,8 @@
 body{
-    background: #17202A; 
+    background-image: linear-gradient(to right,#000428 , #004e92);
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
     font-family: 'PT Sans Narrow', sans-serif;
     color: aliceblue; 
 }
@@ -11,3 +14,4 @@ a{
     color: cornsilk;
     margin: 0 10px;
 }
+background: #17202A; 

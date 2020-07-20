@@ -5,10 +5,12 @@ import { BaseUrl } from '../../variables'
 
 const Subscribe = (props) => {
     useEffect(() => {
-        
+
         document.getElementById("subscribe").style.color = "red"
+       
         return () => {
             document.getElementById("subscribe").style.color = "beige"
+           
         }
     }, [])
 
